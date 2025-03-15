@@ -1,0 +1,20 @@
+{
+  "Secret": "DockerConsoleApp1-Secret-json",
+  "BigSecret": "DockerConsoleApp1-BigSecret-json",
+  "VeryBigSecret": "DockerConsoleApp1-VeryBigSecret-json",
+  "InnerTest": {
+    "TestInt": 0,
+    "TestString": "DockerConsoleApp1-Test-json"
+  },
+  "InnerTests": [
+    {
+      "TestInt": 1,
+      "TestString": "DockerConsoleApp1-Test1-json"
+    },
+    {
+      "TestInt": 2,
+      "TestString": "DockerConsoleApp1-Test2-json"
+    }
+  ]
+}
+

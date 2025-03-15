@@ -1,0 +1,19 @@
+services:
+  dockerconsoleapp:
+    image: ${DOCKER_REGISTRY-}dockerconsoleapp
+    build:
+      context: .
+      dockerfile: DockerConsoleApp/Dockerfile
+    environment:
+      - dockerconsoleapp=dockerconsoleapp-env-yml
+      - BigSecret=dockerconsoleapp-BigSecret-env-yml
+      - InnerTests__0__TestInt=200
+      - InnerTests__0__TestString=DockerConsoleApp-Test1-yml
+  dockerconsoleapp1:
+    image: ${DOCKER_REGISTRY-}dockerconsoleapp1
+    build:
+      context: .
+      dockerfile: DockerConsoleApp1/Dockerfile  
+    environment:
+      - dockerconsoleapp1=dockerconsoleapp1-env-yml
+      - BigSecret=dockerconsoleapp1-BigSecret-env-yml
