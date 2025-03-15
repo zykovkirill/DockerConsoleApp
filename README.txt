@@ -36,3 +36,5 @@ DockerConsoleApp | 2025-03-15T12:38:19.822749434Z dockerconsoleapp-BigSecret-env
 DockerConsoleApp | 2025-03-15T12:38:19.822750485Z DockerConsoleApp-VeryBigSecret-json
 DockerConsoleApp | 2025-03-15T12:38:19.822751578Z DockerConsoleApp-test-Env-Docker
 DockerConsoleApp | 2025-03-15T12:38:19.822753136Z ------------
+
+Продвинутые настройки https://docs.docker.com/compose/how-tos/environment-variables/envvars-precedence/#advanced-example
