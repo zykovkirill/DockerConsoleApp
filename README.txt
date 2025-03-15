@@ -1,8 +1,70 @@
 Пример показывающий настройку конфигурации через переменные окружения и json файла.
 
 1) Переменные окружения в .dockerfile
+
+   DockerConsoleApp:
+		InnerTest__TestString=DockerConsoleApp-test-Env-Docker
+		InnerTests__1__TestString=DockerConsoleApp-Test2-Docker
+
+   DockerConsoleApp1:
+		Secret=DockerConsoleApp1-Secret-Env-Docker
+		InnerTest__TestString=DockerConsoleApp1-test-Env-Docker
+
 2) Переменные окружения в .yml
+
+   DockerConsoleApp:
+		dockerconsoleapp=dockerconsoleapp-env-yml
+		BigSecret=dockerconsoleapp-BigSecret-env-yml
+		InnerTests__0__TestInt=200
+		InnerTests__0__TestString=DockerConsoleApp-Test1-yml
+   DockerConsoleApp1:
+		dockerconsoleapp1=dockerconsoleapp1-env-yml
+		BigSecret=dockerconsoleapp1-BigSecret-env-yml
+
 3) Переменные окружения в .json
+
+   DockerConsoleApp:
+		{
+		  "Secret": "DockerConsoleApp-Secret-json",
+		  "BigSecret": "DockerConsoleApp-BigSecret-json",
+		  "VeryBigSecret": "DockerConsoleApp-VeryBigSecret-json",
+		  "InnerTest": {
+		    "TestInt": 0,
+		    "TestString": "DockerConsoleApp-Test-json"
+		  },
+		  "InnerTests": [
+		    {
+		      "TestInt": 1,
+		      "TestString": "DockerConsoleApp-Test1-json"
+		    },
+		    {
+		      "TestInt": 2,
+		      "TestString": "DockerConsoleApp-Test2-json"
+		    }
+		  ]
+		}
+
+   DockerConsoleApp1:
+	    {
+		  "Secret": "DockerConsoleApp1-Secret-json",
+		  "BigSecret": "DockerConsoleApp1-BigSecret-json",
+		  "VeryBigSecret": "DockerConsoleApp1-VeryBigSecret-json",
+		  "InnerTest": {
+		    "TestInt": 0,
+		    "TestString": "DockerConsoleApp1-Test-json"
+		  },
+		  "InnerTests": [
+		    {
+		      "TestInt": 1,
+		      "TestString": "DockerConsoleApp1-Test1-json"
+		    },
+		    {
+		      "TestInt": 2,
+		      "TestString": "DockerConsoleApp1-Test2-json"
+		    }
+		  ]
+		}
+
 
 Вывод программы:
 
