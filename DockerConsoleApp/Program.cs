@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 Console.WriteLine("------------");
 Console.WriteLine(Environment.GetEnvironmentVariable("dockerconsoleapp"));
 Console.WriteLine(Environment.GetEnvironmentVariable("dockerconsoleapp1"));
+Console.WriteLine(Environment.GetEnvironmentVariable("dockerconsoleappFILE"));
 Console.WriteLine("------------");
 
 var builder = new ConfigurationBuilder();

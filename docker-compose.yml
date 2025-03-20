@@ -1,14 +1,25 @@
+version: '3'
 services:
   dockerconsoleapp:
     image: ${DOCKER_REGISTRY-}dockerconsoleapp
     build:
       context: .
       dockerfile: DockerConsoleApp/Dockerfile
+    env_file:
+      - path: .env
+        required: true # default
+
     environment:
-      - dockerconsoleapp=dockerconsoleapp-env-yml
+      - dockerconsoleapp=sql-i-01;Database=coreDB;Integrated Security=true;TrustServerCertificate=True
+      - ConnectionStrings__CoreDB=Server=sql-i-01;Database=coreDB;Integrated Security=true;TrustServerCertificate=True
+      - ConnectionStrings__Pythoness=Server=sql-i-01;Database=Pythoness;Integrated Security=true;TrustServerCertificate=True
+      - ConnectionStrings__PythonessBuf=Server=sql-i-01;Database=Pythoness_buf;Integrated Security=true;TrustServerCertificate=True
+      - ConnectionStrings__InvestQualification=Server=sql-i-01;Database=InvestQualification;Integrated Security=true;TrustServerCertificate=True
+      - ConnectionStrings__InvestQualification=Server=Server=sql-i-01;Database=DOS;Integrated Security=true;TrustServerCertificate=True
       - BigSecret=dockerconsoleapp-BigSecret-env-yml
       - InnerTests__0__TestInt=200
       - InnerTests__0__TestString=DockerConsoleApp-Test1-yml
+      - InnerTests__1__TestString=DockerConsoleApp-Test2-Docker
   dockerconsoleapp1:
     image: ${DOCKER_REGISTRY-}dockerconsoleapp1
     build:
